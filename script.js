@@ -33,6 +33,7 @@ const newQuote = () => {
   setTimeout(() => {
     isLoading(false);
   }, 1000);
+  printeQuote(currentQuote);
 };
 
 async function getQuotes() {
