@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="quate">
+      <div class="quate__container" data-quote-container>
+        <div class="quote__content" data-quote-content>
+          <div class="quote__text">
+            <i class="fas fa-quote-left quote__icon"></i>
+            <span data-quote-text
+              >Difficulties increase the nearer we get to the goal.</span
+            >
+          </div>
+          <div class="quote__author">
+            <span data-quote-author>Johann Wolfgang von Goethe</span>
+          </div>
+        </div>
+        <!-- loader -->
+        <div class="quote__spinner" data-quote-spinner>
+          <img
+            src="./Spinner-1s-103px.gif"
+            class="quote__spinner-img"
+            alt="spinner"
+          />
+        </div>
+        <div class="quote__act">
+          <button class="quote__btn quote__btn-share" data-twitter-btn>
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button data-new-quote-btn class="quote__btn quote__btn-new-quote">
+            New Quote
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./quotes.js"></script>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
