@@ -1,2 +1,2 @@
 # quote-generator
-Quote Generator
+Quote Generator with Html, Css and vanilla javascript
