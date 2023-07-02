@@ -15,7 +15,8 @@ A quote generator built using HTML, CSS and JavaScript
 
 ### Screenshot
 
-![image](https://user-images.githubusercontent.com/81015655/175759862-e096bb64-5ea2-415d-b2be-0dfa4610b64c.png)
+![image](https://github.com/hamzaswed/vanillajs-quote-generator-project/assets/81015655/cac955cc-f4a5-4126-83f9-a572c3962777)
+
 
 ## Author
 
