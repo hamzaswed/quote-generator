@@ -1,3 +1,5 @@
+import { localQuotes } from "./quotes.js";
+
 const newQuoteBtnEl = document.querySelector("[data-new-quote-btn]");
 const quoteTextEl = document.querySelector("[data-quote-text]");
 const quoteAuthorEl = document.querySelector("[data-quote-author]");
@@ -7,6 +9,7 @@ const quoteContent = document.querySelector("[data-quote-content]");
 
 let allQuotes;
 let currentQuote;
+let initialLoading = true;
 
 const isLoading = (loadingStatus) => {
   quoteSpinner.hidden = !loadingStatus;
@@ -24,15 +27,21 @@ const printeQuote = (quote) => {
 };
 
 const newQuote = () => {
-  isLoading(true);
+  if (initialLoading) {
+    initialLoading = false;
+  } else {
+    isLoading(true);
+  }
 
   const randomNum = Math.trunc(Math.random() * allQuotes.length);
   const quote = allQuotes[randomNum];
   currentQuote = quote;
 
-  setTimeout(() => {
+  // set timeout to see loading spener
+  setTimeout(function () {
     isLoading(false);
-  }, 1000);
+  }, 500);
+
   printeQuote(currentQuote);
 };
 
@@ -50,7 +59,7 @@ async function getQuotes() {
     allQuotes = localQuotes;
   }
 
-  newQuote(allQuotes);
+  newQuote();
 }
 
 // event listeners
